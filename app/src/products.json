@@ -1,0 +1,17 @@
+[
+    { "id": 1,  "name": "casio 1",  "price": 3.26, "type": "analog",  "image": "w1.png" },
+    { "id": 2,  "name": "casio 2",  "price": 9.44, "type": "analog",  "image": "w2.png" },
+    { "id": 3,  "name": "tissot 1", "price": 5.20, "type": "analog",  "image": "w3.png" },
+    { "id": 4,  "name": "orient 1", "price": 0.95, "type": "analog",  "image": "w4.png" },
+    { "id": 5,  "name": "orient 2", "price": 1.04, "type": "digital", "image": "w5.png" },
+    { "id": 6,  "name": "tissot 2", "price": 4.82, "type": "analog",  "image": "w6.png" },
+    { "id": 7,  "name": "tissot 3", "price": 7.53, "type": "analog",  "image": "w7.png" },
+    { "id": 8,  "name": "casio 3",  "price": 4.94, "type": "digital", "image": "w8.png" },
+    { "id": 9, "name": "casio 4",  "price": 6.45, "type": "analog",  "image": "w9.png" },
+    { "id": 10, "name": "casio 5",  "price": 9.95, "type": "digital", "image": "w1.png" },
+    { "id": 11, "name": "orient 3", "price": 2.61, "type": "analog",  "image": "w2.png" },
+    { "id": 12, "name": "orient 4", "price": 1.62, "type": "digital", "image": "w3.png" },
+    { "id": 13, "name": "tissot 4", "price": 8.32, "type": "dual",    "image": "w4.png" },
+    { "id": 14, "name": "orient 5", "price": 5.08, "type": "digital", "image": "w5.png" },
+    { "id": 15, "name": "tissot 5", "price": 3.69, "type": "dual",    "image": "w6.png" }
+  ]

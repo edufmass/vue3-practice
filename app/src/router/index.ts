@@ -10,18 +10,22 @@ export default createRouter({
   routes: [
     {
       path: '/',
+      name: 'Home',
       component: Home,
     },
     {
       path: '/about',
+      name: 'About',
       component: About,
     },
     {
       path: '/products',
+      name: 'Products',
       component: Products,
     },
     {
       path: '/past-orders',
+      name: 'PastOrders',
       component: PastOrders,
     },
   ],
