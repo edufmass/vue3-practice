@@ -34,6 +34,7 @@
             <div class="user_optio_box">
               <a @click="toggleSideBar" >
                 <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                <span>({{ totalQuantity }})</span>
               </a>
             </div>
           </div>
@@ -110,12 +111,18 @@
   </div>
 
   <main>
-    <router-view :inventory="inventory" />
+    <router-view
+      :inventory="inventory"
+      :addToCart="addToCart"
+    />
   </main>
 
   <SideBar
     v-if="showSidebar"
     :toggle="toggleSideBar"
+    :cart="cart"
+    :inventory="inventory"
+    :remove="removeItem"
   />
 </template>
 
@@ -134,17 +141,22 @@ export default {
       cart: {}
     }
   },
+  computed: {
+    totalQuantity () {
+      return Object.values(this.cart).reduce((acc, curr) => {
+        return acc + curr
+      }, 0)
+    }
+  },
   methods: {
-    addToCart (name, index) {
+    addToCart (name: string) {
       if (!this.cart[name]) this.cart[name] = 0
-      this.cart[name] += this.inventory[index].quantity
-      this.inventory[index].quantity = 0
+      this.cart[name] += 1
     },
     toggleSideBar() {
       this.showSidebar = !this.showSidebar
-      console.log("clicked")
     },
-    removeItem (name) {
+    removeItem (name: string | number) {
       delete this.cart[name]
     }
   }

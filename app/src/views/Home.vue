@@ -8,43 +8,12 @@
         </div>
         <div class="product_container">
 
-            <div class="box"
-                v-for="(clock, i) in inventory.slice(0,3)"
+            <ProductCard
+                v-for="(clock) in inventory.slice(0,3)"
                 :key="clock.id"
-            >
-                <div class="box-content">
-                    <div class="img-box">
-                    <img :src="'src/assets/images/'+clock.image" alt="">
-                    </div>
-                    <div class="detail-box">
-                    <div class="text">
-                        <h6>
-                        {{ clock.name.toUpperCase() }}
-                        </h6>
-                        <h5>
-                        <span>$</span> {{ clock.price }}
-                        </h5>
-                    </div>
-                    <div class="like">
-                        <h6>
-                        Like
-                        </h6>
-                        <div class="star_container">
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        </div>
-                    </div>
-                    </div>
-                </div>
-                <div class="btn-box">
-                    <a href="">
-                    Add To Cart {{ i }}
-                    </a>
-                </div>
-            </div>
+                :clock="clock"
+                :addToCart="addToCart"
+            />
             
         </div>
         </div>
@@ -52,8 +21,13 @@
 </template>
 
 <script lang="ts">
+import ProductCard from '@/components/ProductCard.vue';
+
 export default {
     name: 'Home',
-    props: ['inventory']
+    components: {
+        ProductCard
+    },
+    props: ['inventory', 'addToCart']
 }
 </script>
